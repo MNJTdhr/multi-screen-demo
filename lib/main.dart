@@ -6,7 +6,7 @@ void main() {
 
 class BaseScreen extends StatelessWidget {
   const BaseScreen({super.key});
-  
+
   void changeScreen() {}
 
   @override
@@ -20,7 +20,21 @@ class BaseScreen extends StatelessWidget {
           backgroundColor: Colors.indigo,
         ),
         body: Center(
-          child: FloatingActionButton(onPressed: () {}, child: Text("data")),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              FloatingActionButton.extended(
+                onPressed: () {},
+                label: Text("Forward"),
+              ),
+              SizedBox(height: 20),
+              FloatingActionButton.extended(
+                onPressed: () {},
+                label: Text("Forward"),
+              ),
+            ],
+          ),
         ),
       ),
     );
