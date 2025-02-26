@@ -25,8 +25,17 @@ class BaseScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               FloatingActionButton.extended(
-                onPressed: () {},
-                label: Text("Forward"),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return MyScreen2();
+                      },
+                    ),
+                  );
+                },
+                label: Text("Forwardd"),
               ),
               SizedBox(height: 20),
               FloatingActionButton.extended(
@@ -55,9 +64,20 @@ class MyScreen1 extends StatelessWidget {
           backgroundColor: Colors.blue,
         ),
         body: Center(
-          child: FloatingActionButton(
-            onPressed: () {},
-            child: Text("Go to Screen 2"),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              FloatingActionButton.extended(
+                onPressed: () {},
+                label: Text("backward"),
+              ),
+              SizedBox(height: 20),
+              FloatingActionButton.extended(
+                onPressed: () {},
+                label: Text("screen2"),
+              ),
+            ],
           ),
         ),
       ),
@@ -79,9 +99,20 @@ class MyScreen2 extends StatelessWidget {
           backgroundColor: Colors.red,
         ),
         body: Center(
-          child: FloatingActionButton(
-            onPressed: () {},
-            child: Text("Go to Screen 1"),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              FloatingActionButton.extended(
+                onPressed: () {},
+                label: Text("backward"),
+              ),
+              SizedBox(height: 20),
+              FloatingActionButton.extended(
+                onPressed: () {},
+                label: Text("screen1"),
+              ),
+            ],
           ),
         ),
       ),
