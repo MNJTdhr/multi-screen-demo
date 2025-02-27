@@ -1,31 +1,17 @@
 import 'package:flutter/material.dart';
-import 'screen1.dart';
 import 'screen2.dart';
 
-void main() {
-  return runApp(BaseScreen());
-}
-
-class BaseScreen extends StatelessWidget {
-  const BaseScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(home: Myhome());
-  }
-}
-
-class Myhome extends StatelessWidget {
-  const Myhome({super.key});
+class MyScreen1 extends StatelessWidget {
+  const MyScreen1({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Center(
-          child: Text("BaseScreen", style: TextStyle(color: Colors.white)),
+          child: Text("MyScreen1", style: TextStyle(color: Colors.white)),
         ),
-        backgroundColor: Colors.indigo,
+        backgroundColor: Colors.blue,
       ),
       body: Center(
         child: Column(
@@ -33,18 +19,11 @@ class Myhome extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             FloatingActionButton.extended(
-              backgroundColor: Colors.blue,
+              backgroundColor: Colors.indigo,
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return MyScreen1();
-                    },
-                  ),
-                );
+                Navigator.pop(context);
               },
-              label: Text("Screen1", style: TextStyle(color: Colors.white)),
+              label: Text("backward", style: TextStyle(color: Colors.white)),
             ),
             SizedBox(height: 20),
             FloatingActionButton.extended(
@@ -59,7 +38,7 @@ class Myhome extends StatelessWidget {
                   ),
                 );
               },
-              label: Text("Screen2", style: TextStyle(color: Colors.white)),
+              label: Text("screen2", style: TextStyle(color: Colors.white)),
             ),
           ],
         ),
