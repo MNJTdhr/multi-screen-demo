@@ -3,20 +3,11 @@ import 'screen1.dart';
 import 'screen2.dart';
 
 void main() {
-  return runApp(BaseScreen());
+  return runApp(MaterialApp(home: BaseScreen()));
 }
 
 class BaseScreen extends StatelessWidget {
   const BaseScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(home: Myhome());
-  }
-}
-
-class Myhome extends StatelessWidget {
-  const Myhome({super.key});
 
   @override
   Widget build(BuildContext context) {
