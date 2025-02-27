@@ -8,6 +8,9 @@ class MyScreen2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        iconTheme: IconThemeData(
+          color: Colors.white,
+        ),
         title: Center(
           child: Text("MyScreen2", style: TextStyle(color: Colors.white)),
         ),
@@ -18,14 +21,6 @@ class MyScreen2 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.indigo),
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: Text("backward", style: TextStyle(color: Colors.white)),
-            ),
-            SizedBox(height: 20),
             ElevatedButton(
               style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
               onPressed: () {
@@ -39,6 +34,14 @@ class MyScreen2 extends StatelessWidget {
                 );
               },
               child: Text("screen1", style: TextStyle(color: Colors.white)),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.indigo),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text("backward", style: TextStyle(color: Colors.white)),
             ),
           ],
         ),
