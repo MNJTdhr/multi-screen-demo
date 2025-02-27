@@ -19,16 +19,16 @@ class MyScreen1 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            FloatingActionButton.extended(
-              backgroundColor: Colors.indigo,
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.indigo),
               onPressed: () {
                 Navigator.pop(context);
               },
-              label: Text("backward", style: TextStyle(color: Colors.white)),
+              child: Text("backward", style: TextStyle(color: Colors.white)),
             ),
             SizedBox(height: 20),
-            FloatingActionButton.extended(
-              backgroundColor: Colors.red,
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
               onPressed: () {
                 Navigator.push(
                   context,
@@ -39,7 +39,7 @@ class MyScreen1 extends StatelessWidget {
                   ),
                 );
               },
-              label: Text("screen2", style: TextStyle(color: Colors.white)),
+              child: Text("screen2", style: TextStyle(color: Colors.white)),
             ),
           ],
         ),
